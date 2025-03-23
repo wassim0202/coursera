@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 20px;
+            background-color: #f4f4f4;
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ffcc00;
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+
+        @media (min-width: 992px) {
+            .box {
+                width: 32%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .box {
+                width: 48%;
+                margin-bottom: 20px;
+            }
+            .box:last-child {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Menu</h1>
+    <div class="container">
+        <section class="box">
+            <div class="title">Chicken</div>
+           <br> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, quidem adipisci sint quos porro natus?Lorem</p>
+        </section>
+        <section class="box">
+            <div class="title">Beef</div>
+           <br> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt aliquid, ducimus rem qui obcaecati unde quam, ipsam porro, harum totam doloremque eius</p>
+        </section>
+        <section class="box">
+            <div class="title">Sushi</div>
+           <br> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi a illo ut vitae, provident rerum labore eos reprehenderit repellendus, corrupti, vel debitis? Consequatur quasi enim</p>
+        </section>
+    </div>
+</body>
+</html>
